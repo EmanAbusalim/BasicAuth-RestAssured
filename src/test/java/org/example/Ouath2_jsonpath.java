@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class BasicAuthinticationTest {
+public class Ouath2_jsonpath {
     @Test
     public void getAccessToken() {
    RestAssured.baseURI="https://rahulshettyacademy.com/oauthapi/oauth2/resourceOwner/token";
@@ -22,7 +22,6 @@ public class BasicAuthinticationTest {
         System.out.println(  given().queryParam("access_token",accessToken)
                 .when().get("https://rahulshettyacademy.com/oauthapi/getCourseDetails")
                 .asString());
-// parsing the
     }
 
 
