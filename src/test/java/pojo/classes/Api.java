@@ -9,6 +9,14 @@ public class Api {
         this.courseTitle = courseTitle;
     }
 
+    public String getCourseTitle() {
+        return courseTitle;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
     private String courseTitle;
     private String price;
 

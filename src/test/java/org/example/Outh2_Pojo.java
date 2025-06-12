@@ -4,6 +4,9 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 import pojo.classes.ResponsePojo;
+import pojo.classes.WebAutomation;
+
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
@@ -28,8 +31,17 @@ public class Outh2_Pojo {
         ResponsePojo res = given().queryParam("access_token", Access_token)
                 .when().log().all().get("/oauthapi/getCourseDetails")
                 .as(ResponsePojo.class);
-        res.getServices();
+        System.out.println( res.getServices());
+//operation on the json response
+        //get the  data for the response
+        System.out.println(res.getLinkedIn());
+        System.out.println(res.getCourses().getApi().get(2).getCourseTitle());
+        // printing all webAutomation titles
+       List<WebAutomation> webAu =res.getCourses().getWebAutomation();
+       for(int i=0;i< webAu.size();i++){
+           System.out.println( webAu.get(i).getCourseTitle());
 
 
+       }
     }
 }
