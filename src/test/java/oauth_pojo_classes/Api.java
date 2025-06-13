@@ -1,6 +1,6 @@
-package pojo.classes;
+package oauth_pojo_classes;
 
-public class WebAutomation {
+public class Api {
     public void setPrice(String price) {
         this.price = price;
     }
@@ -8,8 +8,6 @@ public class WebAutomation {
     public void setCourseTitle(String courseTitle) {
         this.courseTitle = courseTitle;
     }
-
-    private String courseTitle;
 
     public String getCourseTitle() {
         return courseTitle;
@@ -19,5 +17,7 @@ public class WebAutomation {
         return price;
     }
 
+    private String courseTitle;
     private String price;
+
 }

@@ -1,4 +1,4 @@
-package org.example;
+package oauth_concept;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;

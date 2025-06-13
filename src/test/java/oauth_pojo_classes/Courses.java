@@ -1,4 +1,4 @@
-package pojo.classes;
+package oauth_pojo_classes;
 
 import java.util.List;
 

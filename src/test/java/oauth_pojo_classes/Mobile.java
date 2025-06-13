@@ -1,4 +1,4 @@
-package pojo.classes;
+package oauth_pojo_classes;
 
 public class Mobile {public void setPrice(String price) {
     this.price = price;
